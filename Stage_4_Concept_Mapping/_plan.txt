@@ -1,0 +1,26 @@
+[normalized_complaints.csv]
+                   │
+                   ▼
+┌──────────────────────────────────────────────┐
+│  SUBSTAGE 3.1: CANDIDATE GENERATION          │
+│   1. Vectorize "shortness of breath".        │
+│   2. Search UMLS vector database.            │
+│   3. Retrieve top 5 similar concepts.        │
+└──────────────────────────────────────────────┘
+                   │
+                   ▼
+(List of 5 Candidate CUIs and Descriptions)
+                   │
+                   ▼
+┌────────────────────────────────────────────────┐
+│  SUBSTAGE 3.2: LLM DISAMBIGUATION              │
+│   1. Build prompt with evidence + candidates.  │
+│   2. LLM analyzes context and chooses best fit.│
+│   3. LLM returns the single best CUI.          │
+└────────────────────────────────────────────────┘
+                   │
+                   ▼
+(Single, Unambiguous CUI: "C0013404")
+                   │
+                   ▼
+[concept_mapped_complaints.csv]

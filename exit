@@ -1,0 +1,332 @@
+[33mcommit 9380d95750ce6a3a915d94513446d32f389f6d06[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Vedavyas <vvyas.b@gmail.com>
+Date:   Sat Jun 21 04:52:05 2025 +0530
+
+    my first commit
+
+[1mdiff --git a/Evaluation/11_to_20.csv b/Evaluation/11_to_20.csv[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e183341[m
+[1m--- /dev/null[m
+[1m+++ b/Evaluation/11_to_20.csv[m
+[36m@@ -0,0 +1,11 @@[m
+[32m+[m[32mDocument ID,patient_sex,medical_record_text[m
+[32m+[m[32mnote_011,Unknown,subjective fevers lethargy and bloody drain output[m
+[32m+[m[32mnote_012,Unknown,hematuria weakness[m
+[32m+[m[32mnote_013,Unknown,slurred speech[m
+[32m+[m[32mnote_014,Unknown,shortness of breath[m
+[32m+[m[32mnote_015,Unknown,shortness of breath[m
+[32m+[m[32mnote_016,Unknown,shortness of breath[m
+[32m+[m[32mnote_017,Unknown,anemia melena sob[m
+[32m+[m[32mnote_018,Unknown,shortness of breath[m
+[32m+[m[32mnote_019,Unknown,cough dyspnea[m
+[32m+[m[32mnote_020,Unknown,shortness of breath[m
+\ No newline at end of file[m
+[1mdiff --git a/Evaluation/21_to_30.csv b/Evaluation/21_to_30.csv[m
+[1mnew file mode 100644[m
+[1mindex 0000000..9d8866f[m
+[1m--- /dev/null[m
+[1m+++ b/Evaluation/21_to_30.csv[m
+[36m@@ -0,0 +1,11 @@[m
+[32m+[m[32mDocument ID,patient_sex,medical_record_text[m
+[32m+[m[32mnote_021,Unknown,dyspnea atrial fibrillation[m
+[32m+[m[32mnote_022,Unknown,locally advanced gastric carcinoma[m
+[32m+[m[32mnote_023,Unknown,chest pain[m
+[32m+[m[32mnote_024,Unknown,left diabetic foot ulcer[m
+[32m+[m[32mnote_025,Unknown,chest pain[m
+[32m+[m[32mnote_026,Unknown,right hip pain[m
+[32m+[m[32mnote_027,Unknown,left knee osteoarthritis pain[m
+[32m+[m[32mnote_028,Unknown,rle pain and swelling[m
+[32m+[m[32mnote_029,Unknown,left breast swelling and pain[m
+[32m+[m[32mnote_030,Unknown,low back pain with radiation down the right leg[m
+\ No newline at end of file[m
+[1mdiff --git a/Evaluation/31_to_40.csv b/Evaluation/31_to_40.csv[m
+[1mnew file mode 100644[m
+[1mindex 0000000..daf2c12[m
+[1m--- /dev/null[m
+[1m+++ b/Evaluation/31_to_40.csv[m
+[36m@@ -0,0 +1,11 @@[m
+[32m+[m[32mDocument ID,patient_sex,medical_record_text[m
+[32m+[m[32mnote_031,Unknown,headaches[m
+[32m+[m[32mnote_032,Unknown,brbpr[m
+[32m+[m[32mnote_033,Unknown,leg edema[m
+[32m+[m[32mnote_034,Unknown,dyspnea on exertion[m
+[32m+[m[32mnote_035,Unknown,incarcerated inguinal hernia[m
+[32m+[m[32mnote_036,Unknown,chest pain[m
+[32m+[m[32mnote_037,Unknown,cardiogenic[m
+[32m+[m[32mnote_038,Unknown,weakness and lethargy[m
+[32m+[m[32mnote_039,Unknown,cracked tooth s p fall[m
+[32m+[m[32mnote_040,Unknown,left breast invasive ductal carcinoma[m
+\ No newline at end of file[m
+[1mdiff --git a/Evaluation/41_to_50.csv b/Evaluation/41_to_50.csv[m
+[1mnew file mode 100644[m
+[1mindex 0000000..640976a[m
+[1m--- /dev/null[m
+[1m+++ b/Evaluation/41_to_50.csv[m
+[36m@@ -0,0 +1,11 @@[m
+[32m+[m[32mDocument ID,patient_sex,medical_record_text[m
+[32m+[m[32mnote_041,Unknown,surgical absence of l breast[m
+[32m+[m[32mnote_042,Unknown,i m still hearing the voices[m
+[32m+[m[32mnote_043,Unknown,alcohol intoxication[m
+[32m+[m[32mnote_044,Unknown,shortness of breath[m
+[32m+[m[32mnote_045,Unknown,difficulty with swallowing painful swallowing diarrhea[m
+[32m+[m[32mnote_046,Unknown,hematemesis[m
+[32m+[m[32mnote_047,Unknown,throat pain confusion worsening l hemiparesis[m
+[32m+[m[32mnote_048,Unknown,left leg weakness falls[m
+[32m+[m[32mnote_049,Unknown,adrenal mass[m
+[32m+[m[32mnote_050,Unknown,perianal pain[m
+\ No newline at end of file[m
+[1mdiff --git a/Evaluation/51_to_60.csv b/Evaluation/51_to_60.csv[m
+[1mnew file mode 100644[m
+[1mindex 0000000..a08b9a9[m
+[1m--- /dev/null[m
+[1m+++ b/Evaluation/51_to_60.csv[m
+[36m@@ -0,0 +1,11 @@[m
+[32m+[m[32mDocument ID,patient_sex,medical_record_text[m
+[32m+[m[32mnote_001,Unknown,l2 fracture back pain[m
+[32m+[m[32mnote_002,Unknown,fall bradycardia[m
+[32m+[m[32mnote_003,Unknown,hypotension[m
+[32m+[m[32mnote_004,Unknown,perianal fistula and abscess[m
+[32m+[m[32mnote_005,Unknown,fall from wheelchair[m
+[32m+[m[32mnote_006,Unknown,seizures headaches left frontal cavernous malformation[m
+[32m+[m[32mnote_007,Unknown,arrest of descent ghtn incisional cellulitis with wound abscess[m
+[32m+[m[32mnote_008,Unknown,altered mental status[m
+[32m+[m[32mnote_009,Unknown,weakness[m
+[32m+[m[32mnote_010,Unknown,asymptomatic carotid stenosis[m
+\ No newline at end of file[m
+[1mdiff --git a/Evaluation/61_to_70.csv b/Evaluation/61_to_70.csv[m
+[1mnew file mode 100644[m
+[1mindex 0000000..5b58c8a[m
+[1m--- /dev/null[m
+[1m+++ b/Evaluation/61_to_70.csv[m
+[36m@@ -0,0 +1,11 @@[m
+[32m+[m[32mDocument ID,patient_sex,medical_record_text[m
+[32m+[m[32mnote_011,Unknown,weakness[m
+[32m+[m[32mnote_012,Unknown,presyncope fall[m
+[32m+[m[32mnote_013,Unknown,gi bleed[m
+[32m+[m[32mnote_014,Unknown,seizures abdominal pain[m
+[32m+[m[32mnote_015,Unknown,right leg foot pain[m
+[32m+[m[32mnote_016,Unknown,s p cardiac arrest[m
+[32m+[m[32mnote_017,Unknown,chest pain[m
+[32m+[m[32mnote_018,Unknown,malignant transformation of endometriosis final pathology report pending[m
+[32m+[m[32mnote_019,Unknown,symptomatic fibroid uterus left ovarian cyst[m
+[32m+[m[32mnote_020,Unknown,post tips monitoring[m
+\ No newline at end of file[m
+[1mdiff --git a/Evaluation/71_to_80.csv b/Evaluation/71_to_80.csv[m
+[1mnew file mode 100644[m
+[1mindex 0000000..102c985[m
+[1m--- /dev/null[m
+[1m+++ b/Evaluation/71_to_80.csv[m
+[36m@@ -0,0 +1,11 @@[m
+[32m+[m[32mDocument ID,patient_sex,medical_record_text[m
+[32m+[m[32mnote_021,Unknown,right femoral neck fracture[m
+[32m+[m[32mnote_022,Unknown,right ankle fracture dislocation[m
+[32m+[m[32mnote_023,Unknown,nausea vomiting[m
+[32m+[m[32mnote_024,Unknown,neck fracture[m
+[32m+[m[32mnote_025,Unknown,high blood sugars labs showing acute on chronic kidney injury[m
+[32m+[m[32mnote_026,Unknown,weakness hypoxia secondary to superior vena cava syndrome[m
+[32m+[m[32mnote_027,Unknown,symptomatic macromastia[m
+[32m+[m[32mnote_028,Unknown,20 lb weight gain doe[m
+[32m+[m[32mnote_029,Unknown,abdominal pain[m
+[32m+[m[32mnote_030,Unknown,abdominal pain[m
+\ No newline at end of file[m
+[1mdiff --git a/Evaluation/81_to_90.csv b/Evaluation/81_to_90.csv[m
+[1mnew file mode 100644[m
+[1mindex 0000000..fec6bf6[m
+[1m--- /dev/null[m
+[1m+++ b/Evaluation/81_to_90.csv[m
+[36m@@ -0,0 +1,11 @@[m
+[32m+[m[32mDocument ID,patient_sex,medical_record_text[m
+[32m+[m[32mnote_031,Unknown,ruq abdominal pain vomiting diarrhea[m
+[32m+[m[32mnote_032,Unknown,acute abdominal pain[m
+[32m+[m[32mnote_033,Unknown,abdominal pain nausea vomiting[m
+[32m+[m[32mnote_034,Unknown,abd pain[m
+[32m+[m[32mnote_035,Unknown,hypotension[m
+[32m+[m[32mnote_036,Unknown,nausea and vomiting[m
+[32m+[m[32mnote_037,Unknown,fatigue[m
+[32m+[m[32mnote_038,Unknown,anbormal lfts[m
+[32m+[m[32mnote_039,Unknown,abd pain[m
+[32m+[m[32mnote_040,Unknown,nausea anorexia abdominal pain[m
+\ No newline at end of file[m
+[1mdiff --git a/Evaluation/91_to_100.csv b/Evaluation/91_to_100.csv[m
+[1mnew file mode 100644[m
+[1mindex 0000000..5fe044b[m
+[1m--- /dev/null[m
+[1m+++ b/Evaluation/91_to_100.csv[m
+[36m@@ -0,0 +1,11 @@[m
+[32m+[m[32mDocument ID,patient_sex,medical_record_text[m
+[32m+[m[32mnote_041,Unknown,painless jaundice nausea[m
+[32m+[m[32mnote_042,Unknown,diarrhea[m
+[32m+[m[32mnote_043,Unknown,nausea vomting diarrhea[m
+[32m+[m[32mnote_044,Unknown,hypoglycemia[m
+[32m+[m[32mnote_045,Unknown,nephrolithiasis acute kidney injury[m
+[32m+[m[32mnote_046,Unknown,fever left ankle and knee pain[m
+[32m+[m[32mnote_047,Unknown,post procedure monitoring[m
+[32m+[m[32mnote_048,Unknown,chest pain[m
+[32m+[m[32mnote_049,Unknown,left chest pain[m
+[32m+[m[32mnote_50, Unknown,volume overload[m
+\ No newline at end of file[m
+[1mdiff --git a/Evaluation/eval.csv b/Evaluation/eval.csv[m
+[1mnew file mode 100644[m
+[1mindex 0000000..58727f5[m
+[1m--- /dev/null[m
+[1m+++ b/Evaluation/eval.csv[m
+[36m@@ -0,0 +1,101 @@[m
+[32m+[m[32mDocument ID,patient_sex,medical_record_text[m
+[32m+[m[32mnote_001,Unknown,visual hallucinations[m
+[32m+[m[32mnote_002,Unknown,dysphagia[m
+[32m+[m[32mnote_003,Unknown,left hip pain[m
+[32m+[m[32mnote_004,Unknown,shortness of breath[m
+[32m+[m[32mnote_005,Unknown,fatigue anemia[m
+[32m+[m[32mnote_006,Unknown,dyspnea on exertion[m
+[32m+[m[32mnote_007,Unknown,bladder cancer[m
+[32m+[m[32mnote_008,Unknown,dyspnea on exertion[m
+[32m+[m[32mnote_009,Unknown,abdominal pain distention nausea[m
+[32m+[m[32mnote_010,Unknown,fevers and chills[m
+[32m+[m[32mnote_011,Unknown,subjective fevers lethargy and bloody drain output[m
+[32m+[m[32mnote_012,Unknown,hematuria weakness[m
+[32m+[m[32mnote_013,Unknown,slurred speech[m
+[32m+[m[32mnote_014,Unknown,shortness of breath[m
+[32m+[m[32mnote_015,Unknown,shortness of breath[m
+[32m+[m[32mnote_016,Unknown,shortness of breath[m
+[32m+[m[32mnote_017,Unknown,anemia melena sob[m
+[32m+[m[32mnote_018,Unknown,shortness of breath[m
+[32m+[m[32mnote_019,Unknown,cough dyspnea[m
+[32m+[m[32mnote_020,Unknown,shortness of breath[m
+[32m+[m[32mnote_021,Unknown,dyspnea atrial fibrillation[m
+[32m+[m[32mnote_022,Unknown,locally advanced gastric carcinoma[m
+[32m+[m[32mnote_023,Unknown,chest pain[m
+[32m+[m[32mnote_024,Unknown,left diabetic foot ulcer[m
+[32m+[m[32mnote_025,Unknown,chest pain[m
+[32m+[m[32mnote_026,Unknown,right hip pain[m
+[32m+[m[32mnote_027,Unknown,left knee osteoarthritis pain[m
+[32m+[m[32mnote_028,Unknown,rle pain and swelling[m
+[32m+[m[32mnote_029,Unknown,left breast swelling and pain[m
+[32m+[m[32mnote_030,Unknown,low back pain with radiation down the right leg[m
+[32m+[m[32mnote_031,Unknown,headaches[m
+[32m+[m[32mnote_032,Unknown,brbpr[m
+[32m+[m[32mnote_033,Unknown,leg edema[m
+[32m+[m[32mnote_034,Unknown,dyspnea on exertion[m
+[32m+[m[32mnote_035,Unknown,incarcerated inguinal hernia[m
+[32m+[m[32mnote_036,Unknown,chest pain[m
+[32m+[m[32mnote_037,Unknown,cardiogenic[m
+[32m+[m[32mnote_038,Unknown,weakness and lethargy[m
+[32m+[m[32mnote_039,Unknown,cracked tooth s p fall[m
+[32m+[m[32mnote_040,Unknown,left breast invasive ductal carcinoma[m
+[32m+[m[32mnote_041,Unknown,surgical absence of l breast[m
+[32m+[m[32mnote_042,Unknown,i m still hearing the voices[m
+[32m+[m[32mnote_043,Unknown,alcohol intoxication[m
+[32m+[m[32mnote_044,Unknown,shortness of breath[m
+[32m+[m[32mnote_045,Unknown,difficulty with swallowing painful swallowing diarrhea[m
+[32m+[m[32mnote_046,Unknown,hematemesis[m
+[32m+[m[32mnote_047,Unknown,throat pain confusion worsening l hemiparesis[m
+[32m+[m[32mnote_048,Unknown,left leg weakness falls[m
+[32m+[m[32mnote_049,Unknown,adrenal mass[m
+[32m+[m[32mnote_050,Unknown,perianal pain[m
+[32m+[m[32mnote_001,Unknown,l2 fracture back pain[m
+[32m+[m[32mnote_002,Unknown,fall bradycardia[m
+[32m+[m[32mnote_003,Unknown,hypotension[m
+[32m+[m[32mnote_004,Unknown,perianal fistula and abscess[m
+[32m+[m[32mnote_005,Unknown,fall from wheelchair[m
+[32m+[m[32mnote_006,Unknown,seizures headaches left frontal cavernous malformation[m
+[32m+[m[32mnote_007,Unknown,arrest of descent ghtn incisional cellulitis with wound abscess[m
+[32m+[m[32mnote_008,Unknown,altered mental status[m
+[32m+[m[32mnote_009,Unknown,weakness[m
+[32m+[m[32mnote_010,Unknown,asymptomatic carotid stenosis[m
+[32m+[m[32mnote_011,Unknown,weakness[m
+[32m+[m[32mnote_012,Unknown,presyncope fall[m
+[32m+[m[32mnote_013,Unknown,gi bleed[m
+[32m+[m[32mnote_014,Unknown,seizures abdominal pain[m
+[32m+[m[32mnote_015,Unknown,right leg foot pain[m
+[32m+[m[32mnote_016,Unknown,s p cardiac arrest[m
+[32m+[m[32mnote_017,Unknown,chest pain[m
+[32m+[m[32mnote_018,Unknown,malignant transformation of endometriosis final pathology report pending[m
+[32m+[m[32mnote_019,Unknown,symptomatic fibroid uterus left ovarian cyst[m
+[32m+[m[32mnote_020,Unknown,post tips monitoring[m
+[32m+[m[32mnote_021,Unknown,right femoral neck fracture[m
+[32m+[m[32mnote_022,Unknown,right ankle fracture dislocation[m
+[32m+[m[32mnote_023,Unknown,nausea vomiting[m
+[32m+[m[32mnote_024,Unknown,neck fracture[m
+[32m+[m[32mnote_025,Unknown,high blood sugars labs showing acute on chronic kidney injury[m
+[32m+[m[32mnote_026,Unknown,weakness hypoxia secondary to superior vena cava syndrome[m
+[32m+[m[32mnote_027,Unknown,symptomatic macromastia[m
+[32m+[m[32mnote_028,Unknown,20 lb weight gain doe[m
+[32m+[m[32mnote_029,Unknown,abdominal pain[m
+[32m+[m[32mnote_030,Unknown,abdominal pain[m
+[32m+[m[32mnote_031,Unknown,ruq abdominal pain vomiting diarrhea[m
+[32m+[m[32mnote_032,Unknown,acute abdominal pain[m
+[32m+[m[32mnote_033,Unknown,abdominal pain nausea vomiting[m
+[32m+[m[32mnote_034,Unknown,abd pain[m
+[32m+[m[32mnote_035,Unknown,hypotension[m
+[32m+[m[32mnote_036,Unknown,nausea and vomiting[m
+[32m+[m[32mnote_037,Unknown,fatigue[m
+[32m+[m[32mnote_038,Unknown,anbormal lfts[m
+[32m+[m[32mnote_039,Unknown,abd pain[m
+[32m+[m[32mnote_040,Unknown,nausea anorexia abdominal pain[m
+[32m+[m[32mnote_041,Unknown,painless jaundice nausea[m
+[32m+[m[32mnote_042,Unknown,diarrhea[m
+[32m+[m[32mnote_043,Unknown,nausea vomting diarrhea[m
+[32m+[m[32mnote_044,Unknown,hypoglycemia[m
+[32m+[m[32mnote_045,Unknown,nephrolithiasis acute kidney injury[m
+[32m+[m[32mnote_046,Unknown,fever left ankle and knee pain[m
+[32m+[m[32mnote_047,Unknown,post procedure monitoring[m
+[32m+[m[32mnote_048,Unknown,chest pain[m
+[32m+[m[32mnote_049,Unknown,left chest pain[m
+[32m+[m[32mnote_050,Unknown,volumne overload[m
+\ No newline at end of file[m
+[1mdiff --git a/Evaluation/note.txt b/Evaluation/note.txt[m
+[1mnew file mode 100644[m
+[1mindex 0000000..448d8a4[m
+[1m--- /dev/null[m
+[1m+++ b/Evaluation/note.txt[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mCurrent - 91 to 100[m
+\ No newline at end of file[m
+[1mdiff --git a/Evaluation/test.csv b/Evaluation/test.csv[m
+[1mnew file mode 100644[m
+[1mindex 0000000..5e12a6c[m
+[1m--- /dev/null[m
+[1m+++ b/Evaluation/test.csv[m
+[36m@@ -0,0 +1,50 @@[m
+[32m+[m[32msacral ulcer[m
+[32m+[m[32ml2 fracture back pain[m
+[32m+[m[32mfall bradycardia[m
+[32m+[m[32mhypotension[m
+[32m+[m[32mperianal fistula and abscess[m
+[32m+[m[32mfall from wheelchair[m
+[32m+[m[32mseizures headaches left frontal cavernous malformation[m
+[32m+[m[32marrest of descent ghtn incisional cellulitis with wound abscess[m
+[32m+[m[32maltered mental status[m
+[32m+[m[32mweakness[m
+[32m+[m[32masymptomatic carotid stenosis[m
+[32m+[m[32mweakness[m
+[32m+[m[32mpresyncope fall[m
+[32m+[m[32mgi bleed[m
+[32m+[m[32mseizures abdominal pain[m
+[32m+[m[32mright leg foot pain[m
+[32m+[m[32ms p cardiac arrest[m
+[32m+[m[32mchest pain[m
+[32m+[m[32mmalignant transformation of endometriosis final pathology report pending[m
+[32m+[m[32msymptomatic fibroid uterus left ovarian cyst[m
+[32m+[m[32mpost tips monitoring[m
+[32m+[m[32mright femoral neck fracture[m
+[32m+[m[32mright ankle fracture dislocation[m
+[32m+[m[32mnausea vomiting[m
+[32m+[m[32mneck fracture[m
+[32m+[m[32mhigh blood sugars labs showing acute on chronic kidney injury[m
+[32m+[m[32mweakness hypoxia secondary to superior vena cava syndrome[m
+[32m+[m[32msymptomatic macromastia[m
+[32m+[m[32m20 lb weight gain doe[m
+[32m+[m[32mabdominal pain[m
+[32m+[m[32mabdominal pain[m
+[32m+[m[32mruq abdominal pain vomiting diarrhea[m
+[32m+[m[32macute abdominal pain[m
+[32m+[m[32mabdominal pain nausea vomiting[m
+[32m+[m[32mabd pain[m
+[32m+[m[32mhypotension[m
+[32m+[m[32mnausea and vomiting[m
+[32m+[m[32mfatigue[m
+[32m+[m[32manbormal lfts[m
+[32m+[m[32mabd pain[m
+[32m+[m[32mnausea anorexia abdominal pain[m
+[32m+[m[32mpainless jau

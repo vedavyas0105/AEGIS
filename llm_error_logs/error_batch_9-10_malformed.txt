@@ -1,0 +1,39 @@
+```json
+[
+  {
+    "note_id": "note_009",
+    "patient_sex": "unknown",
+    "chief_complaint": "Abdominal pain",
+    "supporting_evidence": "abdominal pain"
+  },
+  {
+    "note_id": "note_009",
+    "patient_sex": "unknown",
+    "chief_complaint": "Abdominal distention",
+    "supporting_evidence": "distention"
+  },
+  {
+    "note_id": "note_009",
+    "patient_sex": "unknown",
+    "chief_complaint": "Nausea",
+    "supporting_evidence": "nausea"
+  }
+]
+```
+
+```json
+[
+  {
+    "note_id": "note_010",
+    "patient_sex": "unknown",
+    "chief_complaint": "Fever",
+    "supporting_evidence": "fevers"
+  },
+  {
+    "note_id": "note_010",
+    "patient_sex": "unknown",
+    "chief_complaint": "Chills",
+    "supporting_evidence": "chills"
+  }
+]
+```

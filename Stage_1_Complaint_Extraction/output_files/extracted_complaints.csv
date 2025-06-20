@@ -1,0 +1,12 @@
+note_id,patient_sex,chief_complaint,supporting_evidence
+note_101,unknown,Resistant Hypertension,Resistant hypertension
+note_102,unknown,Irritable Bowel Syndrome,Irritable bowel syndrome
+note_103,unknown,Adult hydrocephalus,Adult hydrocephalus
+note_104,unknown,Gait impairment,Gait impairment
+note_105,unknown,Urinary incontinence,Urinary incontinence
+note_105,unknown,Urinary urgency,urgency
+note_106,unknown,Cognitive impairment,Cognitive impairment
+note_107,unknown,Alcohol Use Disorder,Alcohol use disorder
+note_108,unknown,Hypertension,Hypertension
+note_109,unknown,Screening for sexually transmitted disease,Screening for sexually transmitted disease
+note_110,unknown,Rheumatoid arthritis,Rheumatoid arthritis

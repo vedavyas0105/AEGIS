@@ -1,0 +1,397 @@
+Document ID,patient_sex,medical_record_text
+note_011,Unknown,Upper respiratory infection
+note_012,Unknown,Depression
+note_013,Unknown,Diabetes type 2
+note_014,Unknown,Hypertension
+note_015,Unknown,Rheumatoid arthritis
+note_016,Unknown,Atrial fibrillation
+note_017,Unknown,GERD
+note_018,Unknown,Hyperglycemia
+note_019,Unknown,Depression
+note_020,Unknown,Status post renal transplant
+note_021,Unknown,Osteoporosis
+note_022,Unknown,Multiple Sclerosis
+note_023,Unknown,Right knee arthritis
+note_024,Unknown,Right wrist sprain
+note_025,Unknown,Psoriatic arthritis
+note_026,Unknown,Cardiac murmur
+note_027,Unknown,PVCs
+note_028,Unknown,Hypertension
+note_029,Unknown,Hyperlipidemia
+note_030,Unknown,Hypothyroidism
+note_031,Unknown,Lightheadedness/dizziness
+note_032,Unknown,allergic asthma
+note_033,Unknown,Low back sprain
+note_034,Unknown,Right diabetic foot ulcer
+note_035,Unknown,Left ankle pain
+note_036,Unknown,Diabetes type 2
+note_037,Unknown,Hypertension
+note_038,Unknown,Right foot diabetic ulcer
+note_039,Unknown,Diabetes
+note_040,Unknown,"Right knee pain, lateral ligament strain"
+note_041,Unknown,Hypertension
+note_042,Unknown,Diabetes type 2
+note_043,Unknown,Acute disc herniation at L4-5 with nerve root impingement
+note_044,Unknown,Hepatitis C
+note_045,Unknown,Headaches
+note_046,Unknown,Neck strain
+note_047,Unknown,Right shoulder rotator cuff tendinopathy
+note_048,Unknown,Bilateral foot pain
+note_049,Unknown,Bilateral foot pain
+note_050,Unknown,Acute lateral epicondylitis of right elbow
+note_051,Unknown,Diabetes type 2
+note_052,Unknown,Mild acute intermittent asthma
+note_053,Unknown,Kidney stones
+note_054,Unknown,Hypertension
+note_055,Unknown,Diabetes
+note_056,Unknown,Insomnia
+note_057,Unknown,Moderate intermittent asthma
+note_058,Unknown,L4-5 herniated disc with radiculopathy
+note_059,Unknown,Right knee pain
+note_060,Unknown,Hypertension
+note_061,Unknown,Right upper lobe lung nodule
+note_062,Unknown,Rheumatoid arthritis
+note_063,Unknown,Difficulty swallowing
+note_064,Unknown,Diabetes
+note_065,Unknown,High blood pressure
+note_066,Unknown,Right lateral malleolar fracture
+note_067,Unknown,Trigeminal neuralgia
+note_068,Unknown,Right knee pain
+note_069,Unknown,Neck sprain
+note_070,Unknown,Gout
+note_071,Unknown,Osteoarthritis
+note_072,Unknown,Psoriasis
+note_073,Unknown,Diabetes mellitus type 2
+note_074,Unknown,Hypertension
+note_075,Unknown,Left elbow pain
+note_076,Unknown,Epilepsy
+note_077,Unknown,Depression
+note_078,Unknown,Peptic ulcer disease
+note_079,Unknown,Hypertension
+note_080,Unknown,Status post kidney transplant
+note_081,Unknown,Lumbar spine strain
+note_082,Unknown,Chondromalacia of right patella
+note_083,Unknown,Chronic back pain
+note_084,Unknown,Depression
+note_085,Unknown,status post carpal tunnel release
+note_086,Unknown,Lyme disease
+note_087,Unknown,Hypertension
+note_088,Unknown,Diabetes type 2
+note_089,Unknown,Diabetes
+note_090,Unknown,Atrial Fibrillation
+note_091,Unknown,History of Reflux
+note_092,Unknown,Left knee strain
+note_093,Unknown,Hypertension
+note_094,Unknown,Diabetes type II
+note_095,Unknown,Depression
+note_096,Unknown,Hypertension
+note_097,Unknown,Carpal tunnel release
+note_098,Unknown,"Moderate persistent asthma, uncomplicated"
+note_099,Unknown,Allergic rhinitis
+note_100,Unknown,Anaphylactic reaction due to peanuts
+note_101,Unknown,Resistant hypertension
+note_102,Unknown,Irritable bowel syndrome
+note_103,Unknown,Adult hydrocephalus
+note_104,Unknown,Gait impairment
+note_105,Unknown,Urinary incontinence and urgency
+note_106,Unknown,Cognitive impairment
+note_107,Unknown,Alcohol use disorder
+note_108,Unknown,Hypertension
+note_109,Unknown,Screening for sexually transmitted disease
+note_110,Unknown,Rheumatoid arthritis
+note_111,Unknown,Right knee pain
+note_112,Unknown,Lower extremity pitting edema
+note_113,Unknown,High-risk medication use
+note_114,Unknown,Perioral dermatitis
+note_115,Unknown,"Rosacea, including ocular rosacea"
+note_116,Unknown,Mild cholecystitis with gallstones
+note_117,Unknown,Type 2 diabetes
+note_118,Unknown,Low back pain
+note_119,Unknown,Shortness of breath
+note_120,Unknown,Diabetes
+note_121,Unknown,Hypertension
+note_122,Unknown,Right knee pain
+note_123,Unknown,Right elbow pain
+note_124,Unknown,Diabetes type 2
+note_125,Unknown,Hypertension
+note_126,Unknown,Low back pain
+note_127,Unknown,Diabetes
+note_128,Unknown,Right knee lateral collateral ligament strain
+note_129,Unknown,Right Achilles tendinitis
+note_130,Unknown,type 2 diabetes
+note_131,Unknown,right foot ulcer
+note_132,Unknown,Coronary artery disease
+note_133,Unknown,moderate mitral regurgitation
+note_134,Unknown,Acute heart failure
+note_135,Unknown,Hypertension
+note_136,Unknown,Type 2 diabetes
+note_137,Unknown,Coronary artery disease
+note_138,Unknown,Stage 3 chronic kidney disease
+note_139,Unknown,Diabetes
+note_140,Unknown,Mild depression
+note_141,Unknown,Abdominal pain
+note_142,Unknown,Diabetes type 2
+note_143,Unknown,Asthma
+note_144,Unknown,Right carpal tunnel syndrome
+note_145,Unknown,Right elbow contusion
+note_146,Unknown,Congestive heart failure
+note_147,Unknown,Hypertension
+note_148,Unknown,Kidney disease
+note_149,Unknown,Right ankle sprain
+note_150,Unknown,Elevated cholesterol
+note_151,Unknown,Chest pain
+note_152,Unknown,Type 2 diabetes
+note_153,Unknown,Hypertension
+note_154,Unknown,Bilateral knee patellofemoral pain syndrome
+note_155,Unknown,L4-5 disc space due to a herniated disc with radiculopathy
+note_156,Unknown,Left knee pain
+note_157,Unknown,Hypertension
+note_158,Unknown,Depression
+note_159,Unknown,Shortness of breath
+note_160,Unknown,Acid reflux
+note_161,Unknown,Migraines
+note_162,Unknown,Abnormal labs
+note_163,Unknown,COPD
+note_164,Unknown,Congestive heart failure
+note_165,Unknown,Status post right carpal tunnel release
+note_166,Unknown,Coronary artery disease
+note_167,Unknown,Hypertension
+note_168,Unknown,Depression
+note_169,Unknown,COVID-19 Positive
+note_170,Unknown,Hypercholesterolemia
+note_171,Unknown,History of coronary artery bypass grafting
+note_172,Unknown,Coronary artery disease
+note_173,Unknown,Diabetes type 2
+note_174,Unknown,Hypertension
+note_175,Unknown,Status post right ACL repair
+note_176,Unknown,Acid reflux
+note_177,Unknown,Depression
+note_178,Unknown,Diabetes type 2
+note_179,Unknown,Hypertension
+note_180,Unknown,neuropathy
+note_181,Unknown,Hypertension
+note_182,Unknown,Hyperlipidemia
+note_183,Unknown,Type 2 diabetes mellitus
+note_184,Unknown,Peripheral vascular disease
+note_185,Unknown,Bilateral carpal tunnel syndrome
+note_186,Unknown,Bilateral carpal tunnel syndrome
+note_187,Unknown,GERD
+note_188,Unknown,Acute to chronic constipation
+note_189,Unknown,Quadriplegia
+note_190,Unknown,Acne vulgaris
+note_191,Unknown,Status post right medial knee unicompartmental arthroplasty
+note_192,Unknown,Renal hypoplasia
+note_193,Unknown,"Low back pain, left side"
+note_194,Unknown,Neovascular age-related macular degeneration
+note_195,Unknown,Acute right ankle sprain
+note_196,Unknown,Inferior myocardial infarction
+note_197,Unknown,Right knee pain
+note_198,Unknown,Abdominal pain
+note_199,Unknown,Migraine headaches
+note_200,Unknown,Hypertension
+note_201,Unknown,Cough
+note_202,Unknown,Type 2 diabetes
+note_203,Unknown,Hypertension
+note_204,Unknown,Left shoulder pain
+note_205,Unknown,Right knee MCL strain
+note_206,Unknown,Diabetes
+note_207,Unknown,Hypertension
+note_208,Unknown,Elevated blood pressure
+note_209,Unknown,Hyperlipidemia
+note_210,Unknown,Osteoarthritis
+note_211,Unknown,Hypertension
+note_212,Unknown,Diabetes
+note_213,Unknown,Glomerulonephritis
+note_214,Unknown,Cough
+note_215,Unknown,Right knee pain
+note_216,Unknown,Hypertension
+note_217,Unknown,Diabetes
+note_218,Unknown,"Hypertension, uncontrolled"
+note_219,Unknown,Type 2 diabetes
+note_220,Unknown,herniated disc at L4-5 with radiculopathy
+note_221,Unknown,Right shoulder rotator cuff tendinopathy
+note_222,Unknown,Wet macular degeneration
+note_223,Unknown,Right knee contusion
+note_224,Unknown,Right shoulder pain
+note_225,Unknown,Stage III non-small cell lung cancer
+note_226,Unknown,Radiation pneumonitis
+note_227,Unknown,Odynophagia
+note_228,Unknown,"Kidney stone, right side"
+note_229,Unknown,Acute heart failure exacerbation
+note_230,Unknown,Coronary artery disease
+note_231,Unknown,Stage 3 chronic kidney disease
+note_232,Unknown,Acute heart failure exacerbation
+note_233,Unknown,Type 1 diabetes
+note_234,Unknown,Depression
+note_235,Unknown,Acid reflux
+note_236,Unknown,Right index finger DIP joint sprain
+note_237,Unknown,Back pain
+note_238,Unknown,Hypertension
+note_239,Unknown,Depression
+note_240,Unknown,Hypertension
+note_241,Unknown,Impingement syndrome of left shoulder
+note_242,Unknown,Viral infection
+note_243,Unknown,Dandruff
+note_244,Unknown,Comedonal acne
+note_245,Unknown,Multiple benign melanocytic nevi of upper and lower extremities and trunk
+note_246,Unknown,Macromastia
+note_247,Unknown,Chronic urolithiasis
+note_248,Unknown,Atrial fibrillation
+note_249,Unknown,Diabetes Type II
+note_250,Unknown,Asthma
+note_251,Unknown,Status post mitral valve repair
+note_252,Unknown,Congestive heart failure
+note_253,Unknown,Depression
+note_254,Unknown,Hypertension
+note_255,Unknown,Arthritis
+note_256,Unknown,Hypothyroidism
+note_257,Unknown,Status post renal transplant
+note_258,Unknown,Kidney stones
+note_259,Unknown,Migraines
+note_260,Unknown,Reflux
+note_261,Unknown,Acute lumbar strain
+note_262,Unknown,Diabetes type 2
+note_263,Unknown,Congestive heart failure
+note_264,Unknown,Right middle finger distal phalanx fracture
+note_265,Unknown,Acid reflux
+note_266,Unknown,Gout
+note_267,Unknown,Arthritis
+note_268,Unknown,Chronic back pain
+note_269,Unknown,Depression
+note_270,Unknown,History of coronary artery bypass graft
+note_271,Unknown,Anemia
+note_272,Unknown,Congestive heart failure
+note_273,Unknown,Lumbar strain
+note_274,Unknown,Hyperglycemia
+note_275,Unknown,Chest pain
+note_276,Unknown,hypertension
+note_277,Unknown,Asthma
+note_278,Unknown,Depression
+note_279,Unknown,Diabetes Type II
+note_280,Unknown,Newly diagnosed diabetes
+note_281,Unknown,Epilepsy
+note_282,Unknown,congestive heart failure
+note_283,Unknown,COPD
+note_284,Unknown,Depression
+note_285,Unknown,Chronic back pain
+note_286,Unknown,Depression
+note_287,Unknown,Hypertension
+note_288,Unknown,status post rotator cuff repair
+note_289,Unknown,Right leg contusion
+note_290,Unknown,Right proximal humerus fracture
+note_291,Unknown,Right elbow lateral epicondylitis
+note_292,Unknown,New found anemia
+note_293,Unknown,Hypothyroidism
+note_294,Unknown,Abnormal liver enzymes
+note_295,Unknown,Abnormal weight gain
+note_296,Unknown,Acne vulgaris
+note_297,Unknown,Vitamin D deficiency
+note_298,Unknown,Hirsutism
+note_299,Unknown,Stenosing tenosynovitis of right index finger
+note_300,Unknown,Hypogonadism
+note_301,Unknown,Status post bilateral reduction mammoplasty
+note_302,Unknown,Chronic congestive heart failure
+note_303,Unknown,Diabetes mellitus
+note_304,Unknown,disc degeneration at C5-6 and to a lesser extent C4-5 and C3-4
+note_305,Unknown,lower facet arthropathy. C6-7 and C7-T1
+note_306,Unknown,Left upper extremity neuropathy
+note_307,Unknown,History of aortic aneurysm repair
+note_308,Unknown,Elevated alkaline phosphate level
+note_309,Unknown,Right testicular nodule
+note_310,Unknown,Constipation
+note_311,Unknown,Mild hepatomegaly
+note_312,Unknown,melanoma of the right inferior back
+note_313,Unknown,bilateral breast cysts
+note_314,Unknown,right DCIS
+note_315,Unknown,Right hip degenerative joint disease
+note_316,Unknown,Right knee pain
+note_317,Unknown,Type 2 diabetes
+note_318,Unknown,Left shoulder pain
+note_319,Unknown,Congestive heart failure
+note_320,Unknown,Hypertension
+note_321,Unknown,Kidney disease
+note_322,Unknown,Bilateral carpal tunnel syndrome
+note_323,Unknown,Bilateral medial epicondylitis
+note_324,Unknown,Hepatitis C
+note_325,Unknown,"Hypertension, uncontrolled"
+note_326,Unknown,Headache
+note_327,Unknown,Diabetes mellitus
+note_328,Unknown,Sore throat
+note_329,Unknown,Hypertension
+note_330,Unknown,Diabetes
+note_331,Unknown,"Lateral ligament complex sprain, Right ankle"
+note_332,Unknown,Nicotine dependence
+note_333,Unknown,Type 2 diabetes
+note_334,Unknown,gout
+note_335,Unknown,"Patellofemoral pain syndrome, bilateral"
+note_336,Unknown,Right knee sprain
+note_337,Unknown,Ovarian cancer
+note_338,Unknown,Difficulty urinating
+note_339,Unknown,Coronary artery disease
+note_340,Unknown,Diabetes
+note_341,Unknown,Lisfranc fracture
+note_342,Unknown,Kidney stone
+note_343,Unknown,Hypertension
+note_344,Unknown,Right kidney stone
+note_345,Unknown,"Non-healing ulcer, right foot"
+note_346,Unknown,Diabetes
+note_347,Unknown,Coronary artery disease
+note_348,Unknown,"Kidney stone, right side"
+note_349,Unknown,Scalp psoriasis
+note_350,Unknown,Lisfranc fracture
+note_351,Unknown,ransient tics
+note_352,Unknown,lung infections
+note_353,Unknown,Right foot hallux rigidus
+note_354,Unknown,Coronary artery disease
+note_355,Unknown,reduced left ventricular dysfunction
+note_356,Unknown,moderate mitral regurgitation
+note_357,Unknown,Hypertension
+note_358,Unknown,Asthma
+note_359,Unknown,"Lisfranc fracture, left foot"
+note_360,Unknown,Right knee pain
+note_361,Unknown,Acute esophagitis
+note_362,Unknown,congestive heart failure
+note_363,Unknown,Diabetes type 2
+note_364,Unknown,Back pain
+note_365,Unknown,Left ankle sprain of the lateral ligament complex
+note_366,Unknown,Right ankle sprain
+note_367,Unknown,Lower back pain
+note_368,Unknown,Diabetes
+note_369,Unknown,Hypertension
+note_370,Unknown,Right knee posterior cruciate ligament strain
+note_371,Unknown,Congestive heart failure
+note_372,Unknown,Hypertension
+note_373,Unknown,Right knee acute medial meniscus sprain
+note_374,Unknown,Lumbar strain
+note_375,Unknown,Diabetes type 2
+note_376,Unknown,Hypertension
+note_377,Unknown,Osteoarthritis
+note_378,Unknown,Depression
+note_379,Unknown,History of lobectomy
+note_380,Unknown,Hypertension
+note_381,Unknown,Right hand index finger contusion at the tip of the finger
+note_382,Unknown,Iron deficiency anemia
+note_383,Unknown,Pituitary adenoma
+note_384,Unknown,Bitemporal hemianopia
+note_385,Unknown,Non-cardiac chest pain
+note_386,Unknown,Smith-Magenis syndrome
+note_387,Unknown,Right wrist Colles fracture
+note_388,Unknown,Right knee MCL strain
+note_389,Unknown,Hypertension
+note_390,Unknown,Left shoulder pain
+note_391,Unknown,Left knee pain
+note_392,Unknown,Hypertension
+note_393,Unknown,Diabetes mellitus type 2
+note_394,Unknown,Stage III non-small cell lung cancer
+note_395,Unknown,Radiation pneumonitis
+note_396,Unknown,inflammation of the esophagus
+note_397,Unknown,IgA deficiency
+note_398,Unknown,Right medial epicondylitis
+note_399,Unknown,CHF
+note_400,Unknown,Hypertension
+note_401,Unknown,Systolic ejection murmur
+note_402,Unknown,Acute nephrolithiasis
+note_403,Unknown,Right non-healing diabetic foot ulcer
+note_404,Unknown,Tick bite
+note_405,Unknown,Hypertension
+note_406,Unknown,Diabetes type 2

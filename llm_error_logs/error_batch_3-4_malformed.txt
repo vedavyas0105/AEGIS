@@ -1,0 +1,21 @@
+```json
+[
+  {
+    "note_id": "note_003",
+    "patient_sex": "Unknown",
+    "chief_complaint": "Left hip pain",
+    "supporting_evidence": "left hip pain"
+  }
+]
+```
+
+```json
+[
+  {
+    "note_id": "note_004",
+    "patient_sex": "Unknown",
+    "chief_complaint": "Shortness of breath",
+    "supporting_evidence": "shortness of breath"
+  }
+]
+```

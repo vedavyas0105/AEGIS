@@ -1,0 +1,27 @@
+```json
+[
+  {
+    "note_id": "note_005",
+    "patient_sex": "unknown",
+    "chief_complaint": "Fatigue",
+    "supporting_evidence": "fatigue"
+  },
+  {
+    "note_id": "note_005",
+    "patient_sex": "unknown",
+    "chief_complaint": "Anemia",
+    "supporting_evidence": "anemia"
+  }
+]
+```
+
+```json
+[
+  {
+    "note_id": "note_006",
+    "patient_sex": "unknown",
+    "chief_complaint": "Dyspnea on exertion",
+    "supporting_evidence": "dyspnea on exertion"
+  }
+]
+```

@@ -1,0 +1,12 @@
+chief_complaint,supporting_evidence,patient_sex,concept_identifier,candidate_icd_codes
+resistant hypertension,Resistant hypertension,unknown,I1A.0,"['I10', 'I15.2', 'I1A.0', 'R03.0']"
+irritable bowel syndrome,Irritable bowel syndrome,unknown,K58,"['K58', 'K58.9']"
+adult hydrocephalus,Adult hydrocephalus,unknown,G91,"['G91', 'G91.9']"
+gait impairment,Gait impairment,unknown,R26.9,"['G25.89', 'G81.9', 'R26.89', 'R26.9']"
+urinary incontinence,Urinary incontinence,unknown,R32,"['N39.4', 'N39.49', 'R32']"
+urinary urgency,urgency,unknown,R39.15,"['N39.0', 'N39.46', 'R39.15']"
+cognitive impairment,Cognitive impairment,unknown,R41.84,"['F03.90', 'G30.9', 'G31.84', 'R41.84']"
+alcohol use disorder,Alcohol use disorder,unknown,F10,"['F10', 'F10.20', 'F10.90', 'F10.988']"
+hypertension,Hypertension,unknown,I1A,"['I10', 'I1A']"
+screening for sexually transmitted disease,Screening for sexually transmitted disease,unknown,Z11.3,"['A64', 'Z11.3', 'Z72.51']"
+rheumatoid arthritis,Rheumatoid arthritis,unknown,M06.9,"['M05', 'M05.9', 'M06.9']"

@@ -1,0 +1,21 @@
+```json
+[
+  {
+    "note_id": "note_007",
+    "patient_sex": "unknown",
+    "chief_complaint": "Bladder cancer",
+    "supporting_evidence": "bladder cancer"
+  }
+]
+```
+
+```json
+[
+  {
+    "note_id": "note_008",
+    "patient_sex": "unknown",
+    "chief_complaint": "Dyspnea on exertion",
+    "supporting_evidence": "dyspnea on exertion"
+  }
+]
+```

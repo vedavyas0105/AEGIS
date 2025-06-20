@@ -1,0 +1,12 @@
+note_id,patient_sex,chief_complaint,supporting_evidence,pass1_normalized,final_normalized_complaint,rewritten_complaint
+note_101,unknown,resistant hypertension,Resistant hypertension,resistant hypertension,resistant hypertension,resistant hypertension
+note_102,unknown,irritable bowel syndrome,Irritable bowel syndrome,irritable bowel syndrome,irritable bowel syndrome,irritable bowel syndrome
+note_103,unknown,adult hydrocephalus,Adult hydrocephalus,adult hydrocephalus,adult hydrocephalus,"""hydrocephalus"""
+note_104,unknown,gait impairment,Gait impairment,gait impairment,gait impairment,"""gait disturbance"""
+note_105,unknown,urinary incontinence,Urinary incontinence,urinary incontinence,urinary incontinence,urinary incontinence
+note_105,unknown,urinary urgency,urgency,urinary urgency,urinary urgency,"""urinary urgency"""
+note_106,unknown,cognitive impairment,Cognitive impairment,cognitive impairment,cognitive impairment,cognitive impairment
+note_107,unknown,alcohol use disorder,Alcohol use disorder,alcohol use disorder,alcohol use disorder,"""alcohol use disorder"""
+note_108,unknown,hypertension,Hypertension,hypertension,hypertension,hypertension
+note_109,unknown,screening for sexually transmitted disease,Screening for sexually transmitted disease,screening for sexually transmitted disease,screening for sexually transmitted disease,"""sexually transmitted disease screening"""
+note_110,unknown,rheumatoid arthritis,Rheumatoid arthritis,rheumatoid arthritis,rheumatoid arthritis,rheumatoid arthritis
