@@ -1,0 +1,139 @@
+chief_complaint,final_predicted_icd_code
+Visual Hallucinations,R44.1
+Dysphagia,R13.1
+Left hip pain,M25.552
+Shortness of breath,R06.0
+Fatigue,R53.83
+Anemia,D64.9
+Dyspnea on exertion,R06.09
+Bladder Cancer,C67.9
+Dyspnea on Exertion,R06.09
+Abdominal pain,R10.9
+Abdominal distention,R14.0
+Nausea,R11.0
+Fever,R50.9
+Chills,R68.83
+Fever,R50.9
+Lethargy,R53.83
+Bloody drain output,R58
+Hematuria,R31.9
+Weakness,R53.83
+Slurred Speech,R47.1
+Shortness of Breath,R06.0
+Shortness of breath,R06.0
+Anemia,D64.9
+Melena,K92.1
+Shortness of Breath,R06.02
+Cough,R05
+Dyspnea,R06.0
+Dyspnea,R06.0
+Atrial Fibrillation,I48.9
+Locally Advanced Gastric Carcinoma,C16.9
+Acute Chest Pain,R07.9
+Diabetic Foot Ulcer,E11.621
+Right Hip Pain,M25.551
+Left knee osteoarthritis pain,M17.12
+Right lower extremity pain,M79.604
+Right lower extremity swelling,R60.0
+Left breast swelling,N63.2
+Left breast pain,N64.4
+Low back pain,M54.5
+Radicular pain in right leg,M54.1
+Headache,R51
+Bright Red Blood Per Rectum,K92.1
+Leg edema,R60.0
+Dyspnea on exertion,R06.09
+Incarcerated Inguinal Hernia,K40
+Chest Pain,R07.9
+Cardiogenic,R57.0
+Weakness,R53.83
+Lethargy,R53.83
+Cracked Tooth,K03.81
+Fall,W19
+Left Breast Invasive Ductal Carcinoma,D05
+Surgical absence of left breast,Z90.12
+Auditory hallucinations,R44.0
+Alcohol Intoxication,F10.92
+Shortness of Breath,R06.0
+Dysphagia,R13.1
+Odynophagia,R13.1
+Diarrhea,A09.9
+Hematemesis,K92.0
+Throat pain,T17.22
+Confusion,R41.0
+Worsening left hemiparesis,G81
+Left leg weakness,M25.372
+Falls,W19
+Adrenal Mass,D44.10
+Perianal Pain,R10.2
+L2 fracture,S32.0
+Back pain,M54.5
+Fall,W19
+Bradycardia,R00.1
+Hypotension,I95.9
+Perianal Fistula,K61.4
+Perianal Abscess,K61.0
+Fall from wheelchair,W05
+Seizures,R56.9
+Headaches,R51
+Left frontal cavernous malformation,Q04.8
+Arrest of descent,R09.2
+Gestational Hypertension (GHTN),O16
+Incisional Cellulitis,L03.90
+Wound Abscess,L02.91
+Altered Mental Status,R41.82
+Weakness,R53.83
+Asymptomatic carotid stenosis,I65.2
+Weakness,R53.83
+Presyncope,R55
+Fall,W19
+Gastrointestinal Bleeding,K92.2
+Seizures,R56.9
+Abdominal Pain,R10.9
+Right leg foot pain,M79.671
+Status post cardiac arrest,I46.9
+Acute Chest Pain,R07.9
+Malignant Transformation of Endometriosis,C54.1
+Endometriosis,N80
+Pending Pathology Report,R89
+Symptomatic fibroid uterus,N85.8
+Left ovarian cyst,N83.20
+Post-TIPS monitoring,Z71.2
+Femoral neck fracture,S72.0
+Ankle fracture dislocation,S93.06
+Nausea,R11.0
+Vomiting,R11.2
+Neck Fracture,S12
+High blood sugars,R73.9
+Acute on chronic kidney injury,N17.9
+Weakness,R53.83
+Hypoxia,R09.02
+Superior vena cava syndrome,Q26.1
+Macromastia,E65
+Weight gain,E66.9
+Abdominal Pain,R10.9
+Right Upper Quadrant Abdominal Pain,R10.11
+Vomiting,R11.2
+Diarrhea,A09.9
+Acute Abdominal Pain,R10.4
+Abdominal pain,R10.9
+Nausea,R11.0
+Hypotension,I95.9
+Fatigue,R53.83
+Abnormal Liver Function Tests,R94.5
+Abdominal Pain,R10.9
+Anorexia,R63.0
+Painless Jaundice,R17
+Nausea,R11.0
+Diarrhea,A09.9
+Vomiting,R11.1
+Hypoglycemia,E16.2
+Nephrolithiasis,N20.0
+Acute Kidney Injury,N17.9
+Fever,R50.9
+Left Ankle Pain,M25.572
+Left Knee Pain,M25.562
+Post-procedure monitoring,Z48.89
+Chest pain,R07.9
+Left chest pain,R07.89
+Volume overload,E87.7
