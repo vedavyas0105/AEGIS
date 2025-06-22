@@ -1,18 +1,18 @@
 import os
 import re
 import json
-import time
+import config
+import time # Imported the time module
 import pandas as pd
 import google.generativeai as genai
-
-from config import GEMINI_API_KEY, GEMINI_MODEL_NAME, ERROR_LOG_DIR
 
 class ComplaintExtractor:
     """A class to extract clinical complaints from medical notes in batches using an LLM."""
     def __init__(self, model, batch_size=50, delay_between_batches=5):
+    # def __init__(self, model, batch_size=50, delay_between_batches=10):
         self.model = model
         self.batch_size = batch_size
-        self.delay_between_batches = delay_between_batches
+        self.delay_between_batches = delay_between_batches # Store the delay
         self.base_prompt = """
         You are an expert clinical NLP assistant. Your task is to perform a comprehensive review of a medical note and extract All clinical items, including acute problems, chronic conditions, and relevant behavioral factors.
 
@@ -37,12 +37,14 @@ class ComplaintExtractor:
 
     def extract(self, df_notes: pd.DataFrame) -> pd.DataFrame:
         final_dfs = []
-        os.makedirs(ERROR_LOG_DIR, exist_ok=True)
+        error_log_dir = "llm_error_logs"
+        os.makedirs(error_log_dir, exist_ok=True)
 
         for start in range(0, len(df_notes), self.batch_size):
             end = min(start + self.batch_size, len(df_notes))
             df_batch = df_notes.iloc[start:end]
 
+            # Build the prompt for the current batch correctly.
             notes_for_prompt = ""
             for _, row in df_batch.iterrows():
                 notes_for_prompt += f"\n---\nNote ID: {row['Document ID']}\nNote Text: \"\"\"{row['medical_record_text']}\"\"\"\n"
@@ -55,11 +57,12 @@ class ComplaintExtractor:
                 response = self.model.generate_content(prompt)
                 json_text = response.text.strip()
                 
+                # Regex to find JSON within markdown ```json ... ```
                 match = re.search(r"``````", json_text, re.DOTALL)
                 
                 if match:
                     cleaned_json_str = match.group(1)
-                else:
+                else: # Fallback for when markdown block is missing
                     start_index = json_text.find('[')
                     end_index = json_text.rfind(']')
                     if start_index != -1 and end_index != -1:
@@ -76,7 +79,7 @@ class ComplaintExtractor:
 
             except json.JSONDecodeError as e:
                 print(f"❌ JSON Decode Error in batch {start//self.batch_size + 1}: {e}")
-                error_file_path = os.path.join(ERROR_LOG_DIR, f"error_batch_{start+1}-{end}_malformed.txt")
+                error_file_path = os.path.join(error_log_dir, f"error_batch_{start+1}-{end}_malformed.txt")
                 with open(error_file_path, "w", encoding="utf-8") as f: f.write(json_text)
                 print(f"   Faulty LLM output saved to '{error_file_path}' for review.")
                 continue
@@ -85,6 +88,8 @@ class ComplaintExtractor:
                 print(f"❌ An unexpected error occurred in batch {start//self.batch_size + 1}: {e}")
                 continue
             
+            # --- TIME DELAY ADDED HERE ---
+            # If this is not the last batch, pause before processing the next one.
             if end < len(df_notes):
                 print(f"   Waiting {self.delay_between_batches} seconds to respect API rate limit...")
                 time.sleep(self.delay_between_batches)
@@ -97,8 +102,8 @@ class ComplaintExtractor:
 def run_extracting(input_path: str, output_path: str, num_to_process: int, batch_size: int, delay_between_batches: int = 5):
     """The main logic function for Stage 1, callable by other scripts."""
     try:
-        genai.configure(api_key=GEMINI_API_KEY) # type: ignore
-        model = genai.GenerativeModel(GEMINI_MODEL_NAME, generation_config={"temperature": 0}) # type: ignore
+        genai.configure(api_key=config.STAGE_1_GEMINI_API_KEY) # type: ignore
+        model = genai.GenerativeModel(config.GEMINI_MODEL_NAME, generation_config={"temperature": 0}) # type: ignore
     except Exception as e:
         print(f"Error configuring Gemini API: {e}")
         return
@@ -126,17 +131,19 @@ def run_extracting(input_path: str, output_path: str, num_to_process: int, batch
         print("\n❌ No data was extracted from any of the notes.")
 
 def deduplicate_extracted_complaints(input_path: str, output_path: str):
-    """Removes duplicate complaints from the extracted complaints CSV."""
+    """
+    Removes duplicate complaints from the extracted complaints CSV.
+    Keeps only unique rows based on 'chief_complaint' column.
+    Returns the output path if successful, None otherwise.
+    """
     print("\n--- Starting Deduplication of Extracted Complaints ---")
     try:
         df = pd.read_csv(input_path)
-        original_row_count = len(df)
-        print(f"Loaded {original_row_count} rows from '{input_path}'.")
-
         if 'chief_complaint' not in df.columns:
             print("❌ Error: 'chief_complaint' column not found for deduplication.")
             return None
 
+        original_row_count = len(df)
         df['chief_complaint'] = df['chief_complaint'].str.strip().str.lower()
         dedup_df = df.drop_duplicates(subset=['chief_complaint'], keep='first')
         final_row_count = len(dedup_df)

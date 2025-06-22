@@ -1,19 +1,18 @@
-# run_stage2.py
+import config
 import pandas as pd
 
-# --- FIX: The import now correctly points to 'stage2_normalizer' ---
-from normalizer import run_normalization
+from .normalizer import run_normalization
 
-def get_valid_batch_size(limit: int) -> int:
+def get_valid_batch_size() -> int:
     """Prompts the user for a batch size and validates it."""
     while True:
         try:
-            batch_size_str = input(f"Enter the LLM batch size for Stage 2 (1 to {limit}): ")
+            batch_size_str = input("Enter the LLM batch size for Stage 2 (e.g., 10): ")
             batch_size = int(batch_size_str)
-            if 1 <= batch_size <= limit:
+            if batch_size > 0:
                 return batch_size
             else:
-                print(f"Error: Batch size must be between 1 and {limit}.")
+                print("Error: Batch size must be a positive number.")
         except ValueError:
             print("Invalid input. Please enter a whole number.")
 
@@ -22,13 +21,12 @@ def get_valid_batch_size(limit: int) -> int:
 # ==============================================================================
 if __name__ == "__main__":
     # --- Configuration for Direct Execution ---
-    YOUR_ABBREVIATION_FILE = r"input_files\abbreviations.csv"
-    INPUT_COMPLAINTS_CSV = r'..\Stage_1_Complaint_Extraction\output_files\extracted_complaints.csv'
-    FINAL_NORMALIZED_OUTPUT_CSV = r"output_files\normalized_complaints.csv"
+    YOUR_ABBREVIATION_FILE = config.STAGE2_ABBREVIATIONS_CSV
+    INPUT_COMPLAINTS_CSV = config.STAGE1_DEDUP_OUTPUT_CSV
+    FINAL_NORMALIZED_OUTPUT_CSV = config.STAGE2_OUTPUT_CSV
     
     # --- Get User Input for Direct Execution ---
-    FREE_TIER_LIMIT = 15
-    batch_size_to_run = get_valid_batch_size(limit=FREE_TIER_LIMIT)
+    batch_size_to_run = get_valid_batch_size()
 
     try:
         # --- Call the main logic function ---

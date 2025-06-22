@@ -1,18 +1,18 @@
 import pandas as pd
+import config
 
-# --- FIX: The import now correctly points to 'stage3_mapper' ---
-from mapper import run_concept_mapping
+from .mapper import run_concept_mapping
 
-def get_valid_batch_size(limit: int) -> int:
+def get_valid_batch_size() -> int:
     """Prompts the user for a batch size and validates it."""
     while True:
         try:
-            batch_size_str = input(f"Enter the LLM batch size for Stage 4 (1 to {limit}): ")
+            batch_size_str = input("Enter the LLM batch size for Stage 4 (e.g., 10): ")
             batch_size = int(batch_size_str)
-            if 1 <= batch_size <= limit:
+            if batch_size > 0:
                 return batch_size
             else:
-                print(f"Error: Batch size must be between 1 and {limit}.")
+                print("Error: Batch size must be a positive number.")
         except ValueError:
             print("Invalid input. Please enter a whole number.")
 
@@ -20,25 +20,22 @@ def get_valid_batch_size(limit: int) -> int:
 # This block allows the script to be run directly for individual testing.
 # ==============================================================================
 if __name__ == "__main__":
-    # --- Configuration for Direct Execution ---
-    INPUT_NORMALIZED_COMPLAINTS = r"..\Stage_3_Complaint_Rewriting\output_files\rewritten_complaints.csv"
-    icd_code_with_descriptions_CSV = r"output_files\icd_code_with_descriptions.csv"
-    FAISS_INDEX_FILE = r"output_files\umls_faiss.index"
-    OUTPUT_CONCEPT_MAPPED_CSV = r"output_files\concept_mapped_complaints.csv"
+    INPUT_FILE = config.STAGE3_OUTPUT_CSV
+    KB_CSV_FILE = config.STAGE4_KB_CSV
+    FAISS_INDEX_FILE = config.STAGE4_FAISS_INDEX
+    OUTPUT_FILE = config.STAGE4_OUTPUT_CSV
 
-    FREE_TIER_LIMIT = 15
-    batch_size_to_run = get_valid_batch_size(limit=FREE_TIER_LIMIT)
+    batch_size_to_run = get_valid_batch_size()
 
     try:
-        # --- This script no longer needs user input. It processes the whole file by default. ---
         print("Running Stage 3 on the entire input file for standalone testing...")
 
         # --- Call the main logic function ---
         run_concept_mapping(
-            input_path=INPUT_NORMALIZED_COMPLAINTS,
-            kb_csv_path=icd_code_with_descriptions_CSV,
+            input_path=INPUT_FILE,
+            kb_csv_path=KB_CSV_FILE,
             faiss_index_path=FAISS_INDEX_FILE,
-            output_path=OUTPUT_CONCEPT_MAPPED_CSV,
+            output_path=OUTPUT_FILE,
             batch_size=batch_size_to_run
         )
     except FileNotFoundError as e:

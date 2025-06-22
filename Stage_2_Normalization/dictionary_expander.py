@@ -1,6 +1,6 @@
 import json
 from spacy.tokens import Token
-from spacy.language import Language # <--- 1. IMPORT THIS
+from spacy.language import Language
 
 @Language.factory("abbreviation_expander") 
 def create_abbreviation_expander(nlp: Language, name: str, dictionary_path: str):

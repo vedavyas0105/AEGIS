@@ -1,25 +1,25 @@
-from rewriter import run_rewriting
+import config
+from .rewriter import run_rewriting
 
-def get_valid_batch_size(limit: int) -> int:
+def get_valid_batch_size() -> int:
     """Prompts the user for a batch size and validates it."""
     while True:
         try:
-            batch_size_str = input(f"Enter the LLM batch size for Stage 3 (1 to {limit}): ")
+            batch_size_str = input("Enter the LLM batch size for Stage 3 (e.g., 10): ")
             batch_size = int(batch_size_str)
-            if 1 <= batch_size <= limit:
+            if batch_size > 0:
                 return batch_size
             else:
-                print(f"Error: Batch size must be between 1 and {limit}.")
+                print("Error: Batch size must be a positive number.")
         except ValueError:
             print("Invalid input. Please enter a whole number.")
 
 if __name__ == "__main__":
-    INPUT_FILE = r"..\Stage_2_Normalization\output_files\normalized_complaints.csv"
-    OUTPUT_FILE = r"output_files\rewritten_complaints.csv"
+    INPUT_FILE = config.STAGE2_OUTPUT_CSV
+    OUTPUT_FILE = config.STAGE3_OUTPUT_CSV
 
     # --- Get User Input for Direct Execution ---
-    FREE_TIER_LIMIT = 15
-    batch_size_to_run = get_valid_batch_size(limit=FREE_TIER_LIMIT)
+    batch_size_to_run = get_valid_batch_size()
     
     try:
         print("Running Stage 3 (Query Rewriting) for standalone testing...")

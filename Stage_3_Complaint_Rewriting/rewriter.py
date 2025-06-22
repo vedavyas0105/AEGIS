@@ -1,35 +1,13 @@
 import pandas as pd
 import os
 import time
+import config
 import google.generativeai as genai
 
 class ComplaintRewriter:
     """Uses an LLM to rewrite a patient complaint into a standard medical phrase."""
     def __init__(self, model):
         self.model = model
-        # self.prompt_template = """
-        # You are a clinical terminology expert. Your task is to rewrite the following
-        # "Patient Complaint" into a concise, standard medical phrase suitable for
-        # searching a clinical knowledge base like UMLS.
-
-        # Translate colloquial terms into formal medical terms. Do not add any
-        # explanation, just return the rewritten phrase.
-
-        # Example 1:
-        # Patient Complaint: "belly ache and feeling gassy"
-        # Rewritten Complaint: "abdominal pain and flatulence"
-
-        # Example 2:
-        # Patient Complaint: "feeling down and sad for weeks"
-        # Rewritten Complaint: "depressed mood"
-        
-        # Example 3:
-        # Patient Complaint: "pt c/o sob on exertion"
-        # Rewritten Complaint: "dyspnea on exertion"
-        # ---
-        # Patient Complaint: "{normalized_complaint}"
-        # Rewritten Complaint:
-        # """
         self.prompt_template = """
         You are a clinical terminology expert. Your task is to rewrite the following "Patient Complaint" into a concise, standard medical phrase suitable for searching a clinical knowledge base like UMLS.
 
@@ -65,7 +43,7 @@ class ComplaintRewriter:
         Rewritten Complaint: "history of myocardial infarction"
 
         10. Patient Complaint: "high blood sugar"
-            Rewritten Complaint: "hyperglycemia"
+        Rewritten Complaint: "hyperglycemia"
 
         ---
         Patient Complaint: "{normalized_complaint}"
@@ -96,8 +74,8 @@ def run_rewriting(input_path: str, output_path: str, batch_size: int, delay_betw
     """
     print("--- Starting Stage 3: Query Rewriting ---")
     try:
-        genai.configure(api_key="AIzaSyCAiVm6GzFuACYzojuunbBhsxrkZMPpxSw") # type: ignore
-        llm_model = genai.GenerativeModel('gemini-2.0-flash', generation_config={"temperature": 0}) # type: ignore
+        genai.configure(api_key=config.STAGE_3_GEMINI_API_KEY) # type: ignore
+        llm_model = genai.GenerativeModel(config.GEMINI_MODEL_NAME, generation_config={"temperature": 0}) # type: ignore
     except Exception as e:
         print(f"❌ Error configuring Gemini API: {e}"); return
 

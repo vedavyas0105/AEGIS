@@ -1,23 +1,2 @@
 note_id,patient_sex,chief_complaint,supporting_evidence
-240503191033444EHGFED,male,upper respiratory infection,Upper respiratory infection.
-240503191033444EHGFED,male,fatigue,He started to feel really tired
-240503191033444EHGFED,male,shortness of breath,short of breath
-240503191033444EHGFED,male,subjective fever,he felt a little warm.
-240503191033444EHGFED,male,elbow pain,He reports that his elbows hurt quite a bit.
-240503191033444EHGFED,male,knee pain,He notes his knees were pretty tired and he felt some tension around his knees.
-240503191033444EHGFED,male,inconsistent mask use,He has not been wearing a mask as much recently.
-240503191033444EHGFED,male,history of depression,past medical history significant for depression
-240503191033444EHGFED,male,history of type 2 diabetes,past medical history significant for ... type 2 diabetes
-240503191033444EHGFED,male,history of hypertension,past medical history significant for ... hypertension
-240503191033444EHGFED,male,dyspnea on exertion,Endorses dyspnea on exertion.
-240503191033444EHGFED,male,elevated hemoglobin a1c,Hemoglobin A1c is elevated at 8.
-240503191033444EHGFED,male,bilateral lower extremity edema,Edema in the bilateral lower extremities.
-240503191034168BAEHHG,female,annual exam,Annual exam.
-240503191034168BAEHHG,female,rheumatoid arthritis,past medical history significant for rheumatoid arthritis
-240503191034168BAEHHG,female,atrial fibrillation,past medical history significant for atrial fibrillation
-240503191034168BAEHHG,female,gerd,past medical history significant for reflux
-240503191034168BAEHHG,female,palpitations,she endorses continued palpitations. The last episode she had was about 1 week ago.
-240503191034168BAEHHG,female,nasal congestion due to allergies,The patient endorses nasal congestion because of her allergies.
-240503191034168BAEHHG,female,right elbow edema and erythema,Edema and erythema of the right elbow.
-240503191034168BAEHHG,female,right elbow pain,Pain to palpation of the right elbow.
-240503191034168BAEHHG,female,cardiac conversion pause,Event monitor: Positive for conversion pause.
+single_run,unknown,fever,fever
