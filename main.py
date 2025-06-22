@@ -1,10 +1,9 @@
 import os
-import argparse
+import sys
 import pandas as pd
 import config
 
-# FIX: Use relative imports to ensure they work when main.py is in the root.
-# FIX: Ensure function names match their definitions in the respective files.
+# --- Import all stage functions ---
 from Stage_1_Complaint_Extraction.extractor import run_extracting, deduplicate_extracted_complaints
 from Stage_2_Normalization.normalizer import run_normalization
 from Stage_3_Complaint_Rewriting.rewriter import run_rewriting
@@ -12,15 +11,14 @@ from Stage_4_Concept_Mapping.mapper import run_concept_mapping
 from Stage_5_Consolidation.Consolidator import run_candidate_enhancement
 from Stage_6_Reranking.reranker import run_reranking
 
-
 def main(filepath: str, start_stage: int, end_stage: int, num_to_process: int, llm_batch_size: int, dedup_choice: str, single_complaint_mode: bool = False):
     """
     Main function to orchestrate the new 6-stage pipeline.
     This version uses the config.py module and local variables for data flow.
     """
-    print(f"--- Running pipeline from Stage {start_stage} to Stage {end_stage} ---")
+    print(f"\n--- Running pipeline from Stage {start_stage} to Stage {end_stage} ---")
 
-    # This variable will track the output of Stage 1 to be used by later stages.
+    # This variable tracks the output of Stage 1 to be used by later stages.
     stage1_final_output = config.STAGE1_DEDUP_OUTPUT_CSV if dedup_choice in ['y', 'yes'] else config.STAGE1_RAW_OUTPUT_CSV
 
     if start_stage <= 1 <= end_stage:
@@ -113,41 +111,81 @@ if __name__ == "__main__":
             else:
                 print("File not found. Please check the path and try again.")
         
-        parser = argparse.ArgumentParser(description="Run the 6-stage AEGIS medical coding pipeline.")
-        parser.add_argument("--start-stage", type=int, default=1, help="The stage to start from (1-6).")
-        parser.add_argument("--end-stage", type=int, default=6, help="The stage to end at (1-6).")
-        args = parser.parse_args()
+        # --- NEW: Interactive Stage Selection ---
+        print("\n--- Pipeline Stage Selection ---")
+        print("  1. Complaint Extraction\n  2. Text Normalization\n  3. Query Rewriting\n  4. Concept Mapping\n  5. Candidate Enhancement\n  6. Final Selection")
+        
+        while True:
+            try:
+                start_stage = int(input("Enter the start stage (1-6): ").strip())
+                if 1 <= start_stage <= 6: break
+                else: print("Invalid stage. Please enter a number between 1 and 6.")
+            except ValueError: print("Invalid input. Please enter a number.")
+        
+        while True:
+            try:
+                end_stage = int(input(f"Enter the end stage ({start_stage}-6): ").strip())
+                if start_stage <= end_stage <= 6: break
+                else: print(f"Invalid stage. Please enter a number between {start_stage} and 6.")
+            except ValueError: print("Invalid input. Please enter a number.")
 
-        if args.start_stage > args.end_stage:
-            print("Error: --start-stage cannot be greater than --end-stage.")
-        else:
-            total_notes = len(pd.read_csv(filepath))
-            while True:
-                try:
-                    num_str = input(f"Notes to process (1-{total_notes}): ")
-                    num_to_process = int(num_str)
-                    if 1 <= num_to_process <= total_notes: break
-                    else: print(f"Please enter a number between 1 and {total_notes}.")
-                except ValueError: print("Invalid input. Please enter a whole number.")
+        # --- NEW: Prerequisite File Check ---
+        if start_stage > 1:
+            # This dictionary maps a stage to its required input file(s).
+            prerequisites = {
+                2: [config.STAGE1_RAW_OUTPUT_CSV, config.STAGE1_DEDUP_OUTPUT_CSV],
+                3: [config.STAGE2_OUTPUT_CSV],
+                4: [config.STAGE3_OUTPUT_CSV],
+                5: [config.STAGE4_OUTPUT_CSV, config.STAGE1_DEDUP_OUTPUT_CSV],
+                6: [config.STAGE5_OUTPUT_CSV]
+            }
+            required_files = prerequisites.get(start_stage, [])
             
-            while True:
-                try:
-                    batch_str = input(f"Enter global LLM batch size (e.g., 10): ")
-                    llm_batch_size = int(batch_str)
-                    if llm_batch_size > 0: break
-                    else: print("Batch size must be a positive number.")
-                except ValueError: print("Invalid input. Please enter a whole number.")
+            # Check if at least one of the required files exists.
+            # For Stage 2, it needs *either* the raw or deduped file. For others, it needs all listed.
+            all_found = True
+            for req_file in required_files:
+                if not os.path.exists(req_file):
+                    # Special check for stage 2, as it has alternatives
+                    if start_stage == 2 and (os.path.exists(config.STAGE1_RAW_OUTPUT_CSV) or os.path.exists(config.STAGE1_DEDUP_OUTPUT_CSV)):
+                        continue
+                    print(f"\n❌ ERROR: Prerequisite file not found for Stage {start_stage}.")
+                    print(f"   Missing file: {req_file}")
+                    print("   Please run the preceding stages first to generate this file.")
+                    all_found = False
+            
+            if not all_found:
+                sys.exit(1) # Exit the script if prerequisites are not met.
 
-            dedup_choice = ''
+        # --- Collect other user inputs ---
+        total_notes = len(pd.read_csv(filepath))
+        while True:
+            try:
+                num_str = input(f"Notes to process (1-{total_notes}): ")
+                num_to_process = int(num_str)
+                if 1 <= num_to_process <= total_notes: break
+                else: print(f"Please enter a number between 1 and {total_notes}.")
+            except ValueError: print("Invalid input. Please enter a whole number.")
+        
+        while True:
+            try:
+                batch_str = input(f"Enter global LLM batch size (e.g., 10): ")
+                llm_batch_size = int(batch_str)
+                if llm_batch_size > 0: break
+                else: print("Batch size must be a positive number.")
+            except ValueError: print("Invalid input. Please enter a whole number.")
+
+        dedup_choice = 'n'
+        if end_stage > 1: # Only ask for deduplication if we're running past stage 1
             while True:
                 dedup_choice = input("Deduplicate complaints after Stage 1? (y/n): ").lower().strip()
                 if dedup_choice in ['y', 'yes', 'n', 'no']: break
                 else: print("Please enter 'y' for yes or 'n' for no.")
 
-            # CHANGE: All collected variables are now passed as arguments to main()
-            main(filepath, args.start_stage, args.end_stage, num_to_process, llm_batch_size, dedup_choice)
+        main(filepath, start_stage, end_stage, num_to_process, llm_batch_size, dedup_choice)
 
     elif mode == '2':
+        # This section remains unchanged and will run the full pipeline by default.
         print("\n--- Single Complaint Mode Selected ---")
         complaint_text = input("Enter the full medical note or complaint text: ")
         patient_sex = input("Enter patient sex (M/F/Unknown) [default: Unknown]: ").strip().upper() or "Unknown"
@@ -160,7 +198,6 @@ if __name__ == "__main__":
             single_note_df.to_csv(temp_input_path, index=False)
             print(f"Temporary input file created at {temp_input_path}")
             
-            # For a single run, we always run the full pipeline
             main(filepath=temp_input_path, start_stage=1, end_stage=6, num_to_process=1, llm_batch_size=1, dedup_choice='n', single_complaint_mode=True)
             
             final_output_file = config.STAGE6_OUTPUT_CSV

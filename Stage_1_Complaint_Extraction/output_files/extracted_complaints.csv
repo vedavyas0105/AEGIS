@@ -1,2 +1,3 @@
 note_id,patient_sex,chief_complaint,supporting_evidence
-single_complaint_run,unknown,Fever,fever
+note_011,unknown,Upper Respiratory Infection,Upper respiratory infection
+note_012,unknown,Depression,Depression
