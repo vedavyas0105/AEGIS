@@ -1,40 +1,18 @@
 import os
 import re
 import json
-import time # Imported the time module
+import time
 import pandas as pd
 import google.generativeai as genai
+
+from config import GEMINI_API_KEY, GEMINI_MODEL_NAME, ERROR_LOG_DIR
 
 class ComplaintExtractor:
     """A class to extract clinical complaints from medical notes in batches using an LLM."""
     def __init__(self, model, batch_size=50, delay_between_batches=5):
-    # def __init__(self, model, batch_size=50, delay_between_batches=10):
         self.model = model
         self.batch_size = batch_size
-        self.delay_between_batches = delay_between_batches # Store the delay
-        # self.base_prompt = """
-        # You are an expert clinical NLP assistant. Your task is to perform a comprehensive review of a medical note and extract ALL distinct clinical items, including acute problems, chronic conditions, and relevant behavioral factors.
-
-        # To ensure accuracy, follow this two-step process:
-        # 1.  **Internal Checklist:** First, read the entire note and create a mental checklist of every single codable issue (e.g., "Acute Chest Pain," "History of HTN," "Medication Non-compliance," "Smoking History").
-        # 2.  **JSON Formatting:** Second, for each item on your internal checklist, create a separate JSON object with the required details.
-
-        # **Crucial Rule:** Do not let a single, severe complaint cause you to overlook the patient's chronic history or other secondary issues. Every distinct item must be extracted.
-
-        # For each complaint, provide these details in a JSON array format:
-        # 1.  `note_id`: The original document ID.
-        # 2.  `patient_sex`: The gender of the patient.
-        # 3.  `chief_complaint`: A concise summary phrase for the isolated clinical issue.
-        # 4.  `supporting_evidence`: The specific phrase from the note that supports this single issue.
-        # 5.  `icd_codes`: A list of the best relevant ICD-10 codes.
-
-        # Do not add explanations outside of the JSON structure.
-
-        # ---
-        # Here are the medical notes to process:
-        # """
-
-        ### Currently Working Prompt ################################################
+        self.delay_between_batches = delay_between_batches
         self.base_prompt = """
         You are an expert clinical NLP assistant. Your task is to perform a comprehensive review of a medical note and extract All clinical items, including acute problems, chronic conditions, and relevant behavioral factors.
 
@@ -59,14 +37,12 @@ class ComplaintExtractor:
 
     def extract(self, df_notes: pd.DataFrame) -> pd.DataFrame:
         final_dfs = []
-        error_log_dir = "llm_error_logs"
-        os.makedirs(error_log_dir, exist_ok=True)
+        os.makedirs(ERROR_LOG_DIR, exist_ok=True)
 
         for start in range(0, len(df_notes), self.batch_size):
             end = min(start + self.batch_size, len(df_notes))
             df_batch = df_notes.iloc[start:end]
 
-            # Build the prompt for the current batch correctly.
             notes_for_prompt = ""
             for _, row in df_batch.iterrows():
                 notes_for_prompt += f"\n---\nNote ID: {row['Document ID']}\nNote Text: \"\"\"{row['medical_record_text']}\"\"\"\n"
@@ -79,12 +55,11 @@ class ComplaintExtractor:
                 response = self.model.generate_content(prompt)
                 json_text = response.text.strip()
                 
-                # Regex to find JSON within markdown ```json ... ```
                 match = re.search(r"``````", json_text, re.DOTALL)
                 
                 if match:
                     cleaned_json_str = match.group(1)
-                else: # Fallback for when markdown block is missing
+                else:
                     start_index = json_text.find('[')
                     end_index = json_text.rfind(']')
                     if start_index != -1 and end_index != -1:
@@ -101,7 +76,7 @@ class ComplaintExtractor:
 
             except json.JSONDecodeError as e:
                 print(f"❌ JSON Decode Error in batch {start//self.batch_size + 1}: {e}")
-                error_file_path = os.path.join(error_log_dir, f"error_batch_{start+1}-{end}_malformed.txt")
+                error_file_path = os.path.join(ERROR_LOG_DIR, f"error_batch_{start+1}-{end}_malformed.txt")
                 with open(error_file_path, "w", encoding="utf-8") as f: f.write(json_text)
                 print(f"   Faulty LLM output saved to '{error_file_path}' for review.")
                 continue
@@ -110,8 +85,6 @@ class ComplaintExtractor:
                 print(f"❌ An unexpected error occurred in batch {start//self.batch_size + 1}: {e}")
                 continue
             
-            # --- TIME DELAY ADDED HERE ---
-            # If this is not the last batch, pause before processing the next one.
             if end < len(df_notes):
                 print(f"   Waiting {self.delay_between_batches} seconds to respect API rate limit...")
                 time.sleep(self.delay_between_batches)
@@ -124,8 +97,8 @@ class ComplaintExtractor:
 def run_extracting(input_path: str, output_path: str, num_to_process: int, batch_size: int, delay_between_batches: int = 5):
     """The main logic function for Stage 1, callable by other scripts."""
     try:
-        genai.configure(api_key="AIzaSyAGcLSC7CrmPCN8cfPnBM6doX0jbvcZrII") # type: ignore
-        model = genai.GenerativeModel('gemini-2.0-flash', generation_config={"temperature": 0}) # type: ignore
+        genai.configure(api_key=GEMINI_API_KEY) # type: ignore
+        model = genai.GenerativeModel(GEMINI_MODEL_NAME, generation_config={"temperature": 0}) # type: ignore
     except Exception as e:
         print(f"Error configuring Gemini API: {e}")
         return
@@ -152,49 +125,18 @@ def run_extracting(input_path: str, output_path: str, num_to_process: int, batch
     else:
         print("\n❌ No data was extracted from any of the notes.")
 
-# def deduplicate_extracted_complaints(input_path: str, output_path: str):
-#     """
-#     Removes duplicate complaints from the extracted complaints CSV.
-#     Keeps only unique rows based on 'chief_complaint' column.
-#     """
-#     print("\n--- Starting Deduplication of Extracted Complaints ---")
-#     try:
-#         df = pd.read_csv(input_path)
-#         original_row_count = len(df)
-#         print(f"Loaded {original_row_count} rows from '{input_path}'.")
-
-#         # Check if 'chief_complaint' column exists
-#         if 'chief_complaint' not in df.columns:
-#             print("❌ Error: 'chief_complaint' column not found for deduplication.")
-#             return
-
-#         # Normalize chief_complaint for deduplication
-#         df['chief_complaint'] = df['chief_complaint'].str.strip().str.lower()
-#         dedup_df = df.drop_duplicates(subset=['chief_complaint'], keep='first')
-#         final_row_count = len(dedup_df)
-
-#         print(f"Removed {original_row_count - final_row_count} duplicate rows.")
-#         print(f"Found {final_row_count} unique complaints.")
-
-#         os.makedirs(os.path.dirname(output_path), exist_ok=True)
-#         dedup_df.to_csv(output_path, index=False, encoding='utf-8')
-#         print(f"\n🎉 Deduplicated complaints saved to '{output_path}'.")
-#         return output_path
-
 def deduplicate_extracted_complaints(input_path: str, output_path: str):
-    """
-    Removes duplicate complaints from the extracted complaints CSV.
-    Keeps only unique rows based on 'chief_complaint' column.
-    Returns the output path if successful, None otherwise.
-    """
+    """Removes duplicate complaints from the extracted complaints CSV."""
     print("\n--- Starting Deduplication of Extracted Complaints ---")
     try:
         df = pd.read_csv(input_path)
+        original_row_count = len(df)
+        print(f"Loaded {original_row_count} rows from '{input_path}'.")
+
         if 'chief_complaint' not in df.columns:
             print("❌ Error: 'chief_complaint' column not found for deduplication.")
             return None
 
-        original_row_count = len(df)
         df['chief_complaint'] = df['chief_complaint'].str.strip().str.lower()
         dedup_df = df.drop_duplicates(subset=['chief_complaint'], keep='first')
         final_row_count = len(dedup_df)

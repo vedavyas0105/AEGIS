@@ -1,12 +1,23 @@
 note_id,patient_sex,chief_complaint,supporting_evidence
-note_101,unknown,Resistant Hypertension,Resistant hypertension
-note_102,unknown,Irritable Bowel Syndrome,Irritable bowel syndrome
-note_103,unknown,Adult hydrocephalus,Adult hydrocephalus
-note_104,unknown,Gait impairment,Gait impairment
-note_105,unknown,Urinary incontinence,Urinary incontinence
-note_105,unknown,Urinary urgency,urgency
-note_106,unknown,Cognitive impairment,Cognitive impairment
-note_107,unknown,Alcohol Use Disorder,Alcohol use disorder
-note_108,unknown,Hypertension,Hypertension
-note_109,unknown,Screening for sexually transmitted disease,Screening for sexually transmitted disease
-note_110,unknown,Rheumatoid arthritis,Rheumatoid arthritis
+240503191033444EHGFED,male,Upper respiratory infection,Upper respiratory infection.
+240503191033444EHGFED,male,Fatigue,He started to feel really tired
+240503191033444EHGFED,male,Shortness of breath,short of breath
+240503191033444EHGFED,male,Subjective fever,he felt a little warm.
+240503191033444EHGFED,male,Elbow pain,He reports that his elbows hurt quite a bit.
+240503191033444EHGFED,male,Knee pain,He notes his knees were pretty tired and he felt some tension around his knees.
+240503191033444EHGFED,male,Inconsistent mask use,He has not been wearing a mask as much recently.
+240503191033444EHGFED,male,History of depression,past medical history significant for depression
+240503191033444EHGFED,male,History of type 2 diabetes,past medical history significant for ... type 2 diabetes
+240503191033444EHGFED,male,History of hypertension,past medical history significant for ... hypertension
+240503191033444EHGFED,male,Dyspnea on exertion,Endorses dyspnea on exertion.
+240503191033444EHGFED,male,Elevated Hemoglobin A1c,Hemoglobin A1c is elevated at 8.
+240503191033444EHGFED,male,Bilateral lower extremity edema,Edema in the bilateral lower extremities.
+240503191034168BAEHHG,female,Annual Exam,Annual exam.
+240503191034168BAEHHG,female,Rheumatoid Arthritis,past medical history significant for rheumatoid arthritis
+240503191034168BAEHHG,female,Atrial Fibrillation,past medical history significant for atrial fibrillation
+240503191034168BAEHHG,female,GERD,past medical history significant for reflux
+240503191034168BAEHHG,female,Palpitations,she endorses continued palpitations. The last episode she had was about 1 week ago.
+240503191034168BAEHHG,female,Nasal Congestion due to Allergies,The patient endorses nasal congestion because of her allergies.
+240503191034168BAEHHG,female,Right Elbow Edema and Erythema,Edema and erythema of the right elbow.
+240503191034168BAEHHG,female,Right Elbow Pain,Pain to palpation of the right elbow.
+240503191034168BAEHHG,female,Cardiac Conversion Pause,Event monitor: Positive for conversion pause.
