@@ -4,11 +4,7 @@ numpy==1.26.4
 scikit-learn==1.4.2
 faiss-cpu==1.8.0
 
-# Web Application Framework
-# streamlit is removed as it's installed automatically by Streamlit Cloud
-
-# NLP & Language Models
-# Pinning spacy and its dependencies to versions with pre-compiled wheels
+# NLP & Language Models 
 spacy==3.7.5
 blis==0.7.11
 catalogue==2.0.10

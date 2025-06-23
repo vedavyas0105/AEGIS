@@ -1,2 +1,2 @@
 note_id,patient_sex,chief_complaint,supporting_evidence,pass1_normalized,final_normalized_complaint
-single_run,unknown,type 2 diabetes mellitus,T2DM,type 2 diabetes mellitus,type 2 diabetes mellitus
+single_run,unknown,fever,Fever,fever,fever

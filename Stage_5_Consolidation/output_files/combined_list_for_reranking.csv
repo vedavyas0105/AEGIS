@@ -1,2 +1,2 @@
 chief_complaint,supporting_evidence,patient_sex,concept_identifier,candidate_icd_codes
-type 2 diabetes mellitus,T2DM,unknown,E11,"['E11', 'E11.9']"
+fever,Fever,unknown,F63.1,"['F63.1', 'O75.2', 'R50.9']"
