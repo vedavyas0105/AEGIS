@@ -17,26 +17,38 @@ The project is organized into distinct directories for each stage, promoting mod
 ```
 AEGIS/
 ├── Stage_1_Complaint_Extraction/
+│   ├── input/              # Raw clinical text files or CSVs
+│   ├── output/             # Extracted chief complaints
 │   ├── __init__.py
 │   ├── extractor.py
 │   └── run_stage_1.py
 ├── Stage_2_Normalization/
+│   ├── input/              # Output from Stage 1
+│   ├── output/             # Normalized complaints
 │   ├── __init__.py
 │   ├── normalizer.py
 │   └── run_stage_2.py
 ├── Stage_3_Complaint_Rewriting/
+│   ├── input/              # Output from Stage 2
+│   ├── output/             # Rewritten standardized complaints
 │   ├── __init__.py
 │   ├── rewriter.py
 │   └── run_stage_3.py
 ├── Stage_4_Concept_Mapping/
+│   ├── input/              # Output from Stage 3
+│   ├── output/             # ICD concept candidates or CUIs
 │   ├── __init__.py
 │   ├── mapper.py
 │   └── run_stage_4.py
 ├── Stage_5_Consolidation/
+│   ├── input/              # Mapped concepts and context info
+│   ├── output/             # Consolidated ICD predictions
 │   ├── __init__.py
 │   ├── Consolidator.py
 │   └── run_stage_5.py
 ├── Stage_6_Reranking/
+│   ├── input/              # Consolidated ICD codes and metadata
+│   ├── output/             # Final ranked ICD codes
 │   ├── __init__.py
 │   ├── reranker.py
 │   └── run_stage_6.py
