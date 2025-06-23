@@ -9,6 +9,8 @@ streamlit
 
 # NLP & Language Models
 spacy
+spacy-legacy
+spacy-loggers
 sentence-transformers
 google-generativeai
 
