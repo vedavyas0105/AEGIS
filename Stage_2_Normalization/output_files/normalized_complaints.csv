@@ -1,2 +1,12 @@
 note_id,patient_sex,chief_complaint,supporting_evidence,pass1_normalized,final_normalized_complaint
-single_run,unknown,fever,Fever,fever,fever
+single_complaint_run,male,Shortness of breath,increasing SOB,Shortness of breath,Shortness of breath
+single_complaint_run,male,Fatigue,fatigue,Fatigue,Fatigue
+single_complaint_run,male,Mild chest discomfort,mild chest discomfort,Mild chest discomfort,Mild chest discomfort
+single_complaint_run,male,Dizziness,two episodes of dizziness,Dizziness,Dizziness
+single_complaint_run,male,Elevated blood pressure,his home BP readings have been consistently high,Elevated blood pressure,Elevated blood pressure
+single_complaint_run,male,Poorly controlled Type 2 Diabetes Mellitus,poorly controlled T2DM,Poorly controlled Type 2 Diabetes Mellitus,Poorly controlled Type 2 Diabetes Mellitus
+single_complaint_run,male,History of Hypertension,HTN,History of Hypertension,History of Hypertension
+single_complaint_run,male,Elevated blood pressure,BP was 162/94 mmHg,Elevated blood pressure,Elevated blood pressure
+single_complaint_run,male,Mild basal crepitations,mild basal crepitations,Mild basal crepitations,Mild basal crepitations
+single_complaint_run,male,Non-specific ST-T changes on ECG,nonspecific ST-T changes,Non - specific Sinus tachycardia - temperature changes on Electrocardiogram,Non - specific Sinus tachycardia - temperature changes on Electrocardiogram
+single_complaint_run,male,Acute Coronary Syndrome (ACS) considered,A working diagnosis of ACS is considered,Acute Coronary Syndrome ( ACS ) considered,Acute Coronary Syndrome ( Acute Coronary Syndrome ) considered

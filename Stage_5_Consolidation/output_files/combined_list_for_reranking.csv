@@ -1,2 +1,12 @@
 chief_complaint,supporting_evidence,patient_sex,concept_identifier,candidate_icd_codes
-fever,Fever,unknown,F63.1,"['F63.1', 'O75.2', 'R50.9']"
+Shortness of breath,increasing SOB,male,R06.0,"['I50.9', 'J96.90', 'R06.0', 'R06.02']"
+Fatigue,fatigue,male,R53,"['R53', 'R53.83']"
+Mild chest discomfort,mild chest discomfort,male,R07.9,"['I20.9', 'R07.9']"
+Dizziness,two episodes of dizziness,male,R42,"['H81.4', 'R42']"
+Elevated blood pressure,his home BP readings have been consistently high,male,I1A,"['I10', 'I1A']"
+Poorly controlled Type 2 Diabetes Mellitus,poorly controlled T2DM,male,E11.8,"['E11', 'E11.8', 'E11.9']"
+History of Hypertension,HTN,male,I1A,"['I10', 'I1A']"
+Elevated blood pressure,BP was 162/94 mmHg,male,I1A,"['I10', 'I1A']"
+Mild basal crepitations,mild basal crepitations,male,G45.0,"['G45.0', 'J98.8', 'K03.81', 'R09.89']"
+Non-specific ST-T changes on ECG,nonspecific ST-T changes,male,R00.0,"['I47.11', 'R00.0', 'R68.83']"
+Acute Coronary Syndrome (ACS) considered,A working diagnosis of ACS is considered,male,I24.9,"['I21', 'I24.9']"

@@ -1,2 +1,12 @@
 note_id,patient_sex,chief_complaint,supporting_evidence
-single_run,unknown,Fever,Fever
+single_complaint_run,male,Shortness of breath,increasing SOB
+single_complaint_run,male,Fatigue,fatigue
+single_complaint_run,male,Mild chest discomfort,mild chest discomfort
+single_complaint_run,male,Dizziness,two episodes of dizziness
+single_complaint_run,male,Elevated blood pressure,his home BP readings have been consistently high
+single_complaint_run,male,Poorly controlled Type 2 Diabetes Mellitus,poorly controlled T2DM
+single_complaint_run,male,History of Hypertension,HTN
+single_complaint_run,male,Elevated blood pressure,BP was 162/94 mmHg
+single_complaint_run,male,Mild basal crepitations,mild basal crepitations
+single_complaint_run,male,Non-specific ST-T changes on ECG,nonspecific ST-T changes
+single_complaint_run,male,Acute Coronary Syndrome (ACS) considered,A working diagnosis of ACS is considered
